@@ -1,0 +1,70 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:16 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/vik/.codex/tmp/arg0/codex-arg0PhhcAj/"
+      - "/home/vik/local/radware/src/"
+      - "/opt/miniconda3/condabin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/Geant4/Geant4-v11.1.1/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/home/vik/.local/bin/"
+      - "/home/vik/.vscode/extensions/openai.chatgpt-26.616.51431-linux-x64/bin/linux-x86_64/"
+      - "/bin/"
+    searched_directories:
+      - "/home/vik/.codex/tmp/arg0/codex-arg0PhhcAj/uname"
+      - "/home/vik/local/radware/src/uname"
+      - "/opt/miniconda3/condabin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/vik/.codex/tmp/arg0/codex-arg0PhhcAj"
+        - "/home/vik/local/radware/src"
+        - "/home/vik/local/radware/src"
+        - "/opt/miniconda3/condabin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/Geant4/Geant4-v11.1.1/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/vik/.local/bin"
+        - "/opt/Geant4/Geant4-v11.1.1/bin"
+        - "/home/vik/.local/bin"
+        - "/home/vik/.vscode/extensions/openai.chatgpt-26.616.51431-linux-x64/bin/linux-x86_64"
+        - "/opt/Geant4/Geant4-v11.1.1/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      The system is: Linux - 7.0.12-arch1-1 - x86_64
+...

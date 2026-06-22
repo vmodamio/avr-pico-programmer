@@ -1,5 +1,6 @@
 #include "avrprog.h"
 
+#include <stdio.h>
 #include <pico/stdlib.h>
 #include <hardware/spi.h>
 
@@ -33,6 +34,11 @@ void avr_reset() {
     sleep_ms(20);
 }
 
+void avr_leave_programming_mode() {
+    gpio_put(reset_pin, 1);
+    spi_deinit(spi0);
+}
+
 bool avr_enter_programming_mode() {
     // Send the programming enable command.
     uint8_t cmd[4] = {0xAC, 0x53, 0x00, 0x00};
@@ -40,6 +46,12 @@ bool avr_enter_programming_mode() {
 
     // If the controller sent an echo of the second byte.
     return output_buffer[2] == 0x53;
+}
+
+uint8_t avr_read_signature_byte(uint8_t index) {
+    uint8_t cmd[4] = {0x30, 0x00, index, 0x00};
+    spi_write_read_blocking(spi0, cmd, output_buffer, 4);
+    return output_buffer[3];
 }
 
 int erase_c = 0;
@@ -135,10 +147,11 @@ void avr_write_temporary_buffer_page(uint16_t* data, size_t data_len) {
     }
 }
 
-bool avr_verify_program_memory_page(uint16_t page_address_start, uint16_t* expected_data, size_t data_len) {
+bool avr_verify_program_memory_page(uint16_t page_address_start, const uint8_t* expected_data, size_t data_len) {
     for (size_t i = 0; i < data_len; i++) {
         uint16_t word = avr_read_program_memory(page_address_start + i);
-        if (word != expected_data[i]) return false;
+        uint16_t expected_word = ((uint16_t) expected_data[i * 2 + 1] << 8) | expected_data[i * 2];
+        if (word != expected_word) return false;
     }
 
     return true;

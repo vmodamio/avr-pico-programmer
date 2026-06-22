@@ -8,10 +8,16 @@ void avr_spi_init();
 // Causes the microcontroller to perform a reset sequence by pulsing the RESET pin.
 void avr_reset();
 
+// Releases RESET and disables SPI so the AVR can run its newly programmed firmware.
+void avr_leave_programming_mode();
+
 // Sends a Programming Enable command to enter memory programming mode.
 // Returns a boolean indicating the microcontrollers acknowledgement through a satisfactory echo.
 // "If the 0x53 did not echo back, give RESET a positive pulse and issue a new Programming Enable command"
 bool avr_enter_programming_mode();
+
+// Reads one of the three device signature bytes (index 0 through 2).
+uint8_t avr_read_signature_byte(uint8_t index);
 
 // Erases the program memory as well as the EEPROM.
 // This operation must be performed before programming of new data.
@@ -53,4 +59,4 @@ void avr_write_temporary_buffer_page(uint16_t* data, size_t data_len);
 
 // Verifies and compares the values on the program memory to the expected_data buffer and returns a boolean indicating result (true = matches).
 // This should be done after each page is flashed onto the controller as writes can be often unreliable and fail, so that the operation can be retried.
-bool avr_verify_program_memory_page(uint16_t page_address_start, uint16_t* expected_data, size_t data_len);
+bool avr_verify_program_memory_page(uint16_t page_address_start, const uint8_t* expected_data, size_t data_len);

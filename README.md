@@ -22,9 +22,12 @@ A programmer for the AVR architecture microcontroller, specifically the ATTiny84
   In case the schematic is unclear: VBUS-HV&VCC | GND-GND&GND | 3V3_OUT-LV | GP19-LV3-HV3-PA6 | GP18-LV2-HV2-PA4 | GP17-LV1-HV1-PB3 | GP16-LV4-HV4-PA5
 
 ### Programming
-- The tool is designed so that you can also program firmware using a serial port client, which you can do so by using a tool such as PuTTY and pasting in the hex of each individual byte of the firmware, each being followed by a space (" ") - after all hex bytes have been sent, press enter and the programmer will begin erasing and flashing the AVR controller.
-- Alternatively, I have written a client for this in Node.js which takes in a binary file of the firmware and automatically interfaces with the Pico programmer:
-![image](https://github.com/SpeedyCraftah/avr-pico-programmer/assets/45142584/97871f71-8e47-403e-9a21-1378b84e81be)
+- With no firmware stored, the Pico appears as a small USB drive named `AVRPROG`.
+- Copy one `.bin` or Intel HEX (`.hex`) firmware file to the root of the drive. Raw binaries may contain up to 128 KiB and must have an even size. Conventional Intel HEX files up to 500 KiB are decoded with address and checksum validation; their decoded address range may contain up to 128 KiB.
+- When the copy finishes, the Pico automatically restarts as a USB serial programmer. Open the serial port and type `status` to check the selected file, then type `flash` to erase, program, and verify the connected AVR.
+- Type `delete` (or `remove`) to erase the stored binary. The Pico restarts in USB storage mode so another file can be copied.
+- The target is detected from its three-byte AVR signature. Supported parts include the ATtiny84A and common ATmega8/16/32/64/128, ATmega164/324/328/644, ATmega1280, and ATmega1284 variants. The detected device determines the flash capacity and page size.
+- Type `help` on the serial port to list the available commands.
 
 ## Motivation
 - A while back I got hold of an ATTiny84A but had no idea how to program it, later realising I needed an Arduino or a dedicated AVR programmer, hence decided to try to program it via a Raspberry Pi Pico.

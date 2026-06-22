@@ -1,0 +1,55 @@
+CMakeFiles/prog.dir/tmp/pico-sdk/src/common/pico_util/queue.c.o: \
+ /tmp/pico-sdk/src/common/pico_util/queue.c \
+ /usr/arm-none-eabi/include/stdlib.h \
+ /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/config.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
+ /usr/arm-none-eabi/include/sys/reent.h \
+ /usr/arm-none-eabi/include/_ansi.h \
+ /usr/arm-none-eabi/include/sys/cdefs.h \
+ /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/_types.h \
+ /usr/arm-none-eabi/include/machine/_types.h \
+ /usr/arm-none-eabi/include/sys/lock.h \
+ /usr/arm-none-eabi/include/machine/stdlib.h \
+ /usr/arm-none-eabi/include/alloca.h /usr/arm-none-eabi/include/string.h \
+ /usr/arm-none-eabi/include/sys/_locale.h \
+ /usr/arm-none-eabi/include/strings.h \
+ /usr/arm-none-eabi/include/sys/string.h \
+ /tmp/pico-sdk/src/common/pico_util/include/pico/util/queue.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
+ /usr/arm-none-eabi/include/assert.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
+ /home/vik/avr-pico-programmer/pico/build-pico/generated/pico_base/pico/version.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+ /home/vik/avr-pico-programmer/pico/build-pico/generated/pico_base/pico/config_autogen.h \
+ /tmp/pico-sdk/src/boards/include/boards/pico.h \
+ /tmp/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+ /tmp/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+ /tmp/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+ /tmp/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+ /tmp/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+ /tmp/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+ /tmp/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
+ /tmp/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+ /tmp/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+ /tmp/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+ /tmp/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+ /tmp/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+ /tmp/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+ /tmp/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+ /tmp/pico-sdk/src/common/pico_time/include/pico/time.h \
+ /tmp/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+ /tmp/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+ /tmp/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+ /tmp/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
